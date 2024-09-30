@@ -9,16 +9,16 @@ import '../di/dependency_injection.dart';
 
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {
-
     switch (settings.name) {
       case Routes.onBoardingScreen:
         return MaterialPageRoute(
           builder: (_) => const OnboardingScreen(),
         );
+
       case Routes.chatScreen:
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
-            create: (context) => getIt<ChatCubit>(),
+            create: (context) => getIt<ChatCubit>()..setupChat(),
             child: const ChatScreen(),
           ),
         );

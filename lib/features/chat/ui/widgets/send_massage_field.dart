@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lili_fashion_expert/core/helpers/spacing.dart';
 import 'package:lili_fashion_expert/core/theming/colors.dart';
 import 'package:lili_fashion_expert/features/chat/logic/cubit/chat_cubit.dart';
+import 'package:lili_fashion_expert/features/chat/logic/cubit/chat_state.dart';
 import 'package:lili_fashion_expert/features/chat/ui/widgets/text_form_field.dart';
 
 class SendMassageField extends StatelessWidget {
@@ -14,7 +15,7 @@ class SendMassageField extends StatelessWidget {
     ChatCubit cubit = context.read<ChatCubit>();
 
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 10.w),
+      padding: EdgeInsets.symmetric(vertical: 5.h, horizontal: 10.w),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(200.r),
         color: ColorsManager.darkBlue,
@@ -51,15 +52,26 @@ class SendMassageField extends StatelessWidget {
             ),
           ),
           horizontalSpace(10),
-          InkWell(
-            onTap: () {
-              cubit.emitChatStates();
+          BlocBuilder<ChatCubit, ChatState>(
+            buildWhen: (previous, current) =>
+                current is ChatLoading || current is ChatSuccess,
+            builder: (context, state) {
+              if (state is ChatLoading) {
+                return const CircularProgressIndicator(
+                  color: ColorsManager.lightBlue,
+                );
+              }
+              return InkWell(
+                onTap: () {
+                  cubit.emitChatStates();
+                },
+                child: Icon(
+                  Icons.send,
+                  size: 30.sp,
+                  color: ColorsManager.lightBlue,
+                ),
+              );
             },
-            child: Icon(
-              Icons.send,
-              size: 30.sp,
-              color: ColorsManager.lightBlue,
-            ),
           ),
         ],
       ),

@@ -22,6 +22,7 @@ mixin _$ChatState<T> {
     required TResult Function() chatLoading,
     required TResult Function(T data) chatSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) chatError,
+    required TResult Function() updateMassages,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$ChatState<T> {
     TResult? Function()? chatLoading,
     TResult? Function(T data)? chatSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? chatError,
+    TResult? Function()? updateMassages,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,7 @@ mixin _$ChatState<T> {
     TResult Function()? chatLoading,
     TResult Function(T data)? chatSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? chatError,
+    TResult Function()? updateMassages,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +50,7 @@ mixin _$ChatState<T> {
     required TResult Function(ChatLoading<T> value) chatLoading,
     required TResult Function(ChatSuccess<T> value) chatSuccess,
     required TResult Function(ChatError<T> value) chatError,
+    required TResult Function(UpdateMassages<T> value) updateMassages,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +59,7 @@ mixin _$ChatState<T> {
     TResult? Function(ChatLoading<T> value)? chatLoading,
     TResult? Function(ChatSuccess<T> value)? chatSuccess,
     TResult? Function(ChatError<T> value)? chatError,
+    TResult? Function(UpdateMassages<T> value)? updateMassages,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +68,7 @@ mixin _$ChatState<T> {
     TResult Function(ChatLoading<T> value)? chatLoading,
     TResult Function(ChatSuccess<T> value)? chatSuccess,
     TResult Function(ChatError<T> value)? chatError,
+    TResult Function(UpdateMassages<T> value)? updateMassages,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -128,6 +134,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function() chatLoading,
     required TResult Function(T data) chatSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) chatError,
+    required TResult Function() updateMassages,
   }) {
     return initial();
   }
@@ -139,6 +146,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function()? chatLoading,
     TResult? Function(T data)? chatSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? chatError,
+    TResult? Function()? updateMassages,
   }) {
     return initial?.call();
   }
@@ -150,6 +158,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function()? chatLoading,
     TResult Function(T data)? chatSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? chatError,
+    TResult Function()? updateMassages,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -165,6 +174,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(ChatLoading<T> value) chatLoading,
     required TResult Function(ChatSuccess<T> value) chatSuccess,
     required TResult Function(ChatError<T> value) chatError,
+    required TResult Function(UpdateMassages<T> value) updateMassages,
   }) {
     return initial(this);
   }
@@ -176,6 +186,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(ChatLoading<T> value)? chatLoading,
     TResult? Function(ChatSuccess<T> value)? chatSuccess,
     TResult? Function(ChatError<T> value)? chatError,
+    TResult? Function(UpdateMassages<T> value)? updateMassages,
   }) {
     return initial?.call(this);
   }
@@ -187,6 +198,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(ChatLoading<T> value)? chatLoading,
     TResult Function(ChatSuccess<T> value)? chatSuccess,
     TResult Function(ChatError<T> value)? chatError,
+    TResult Function(UpdateMassages<T> value)? updateMassages,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -242,6 +254,7 @@ class _$ChatLoadingImpl<T> implements ChatLoading<T> {
     required TResult Function() chatLoading,
     required TResult Function(T data) chatSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) chatError,
+    required TResult Function() updateMassages,
   }) {
     return chatLoading();
   }
@@ -253,6 +266,7 @@ class _$ChatLoadingImpl<T> implements ChatLoading<T> {
     TResult? Function()? chatLoading,
     TResult? Function(T data)? chatSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? chatError,
+    TResult? Function()? updateMassages,
   }) {
     return chatLoading?.call();
   }
@@ -264,6 +278,7 @@ class _$ChatLoadingImpl<T> implements ChatLoading<T> {
     TResult Function()? chatLoading,
     TResult Function(T data)? chatSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? chatError,
+    TResult Function()? updateMassages,
     required TResult orElse(),
   }) {
     if (chatLoading != null) {
@@ -279,6 +294,7 @@ class _$ChatLoadingImpl<T> implements ChatLoading<T> {
     required TResult Function(ChatLoading<T> value) chatLoading,
     required TResult Function(ChatSuccess<T> value) chatSuccess,
     required TResult Function(ChatError<T> value) chatError,
+    required TResult Function(UpdateMassages<T> value) updateMassages,
   }) {
     return chatLoading(this);
   }
@@ -290,6 +306,7 @@ class _$ChatLoadingImpl<T> implements ChatLoading<T> {
     TResult? Function(ChatLoading<T> value)? chatLoading,
     TResult? Function(ChatSuccess<T> value)? chatSuccess,
     TResult? Function(ChatError<T> value)? chatError,
+    TResult? Function(UpdateMassages<T> value)? updateMassages,
   }) {
     return chatLoading?.call(this);
   }
@@ -301,6 +318,7 @@ class _$ChatLoadingImpl<T> implements ChatLoading<T> {
     TResult Function(ChatLoading<T> value)? chatLoading,
     TResult Function(ChatSuccess<T> value)? chatSuccess,
     TResult Function(ChatError<T> value)? chatError,
+    TResult Function(UpdateMassages<T> value)? updateMassages,
     required TResult orElse(),
   }) {
     if (chatLoading != null) {
@@ -384,6 +402,7 @@ class _$ChatSuccessImpl<T> implements ChatSuccess<T> {
     required TResult Function() chatLoading,
     required TResult Function(T data) chatSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) chatError,
+    required TResult Function() updateMassages,
   }) {
     return chatSuccess(data);
   }
@@ -395,6 +414,7 @@ class _$ChatSuccessImpl<T> implements ChatSuccess<T> {
     TResult? Function()? chatLoading,
     TResult? Function(T data)? chatSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? chatError,
+    TResult? Function()? updateMassages,
   }) {
     return chatSuccess?.call(data);
   }
@@ -406,6 +426,7 @@ class _$ChatSuccessImpl<T> implements ChatSuccess<T> {
     TResult Function()? chatLoading,
     TResult Function(T data)? chatSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? chatError,
+    TResult Function()? updateMassages,
     required TResult orElse(),
   }) {
     if (chatSuccess != null) {
@@ -421,6 +442,7 @@ class _$ChatSuccessImpl<T> implements ChatSuccess<T> {
     required TResult Function(ChatLoading<T> value) chatLoading,
     required TResult Function(ChatSuccess<T> value) chatSuccess,
     required TResult Function(ChatError<T> value) chatError,
+    required TResult Function(UpdateMassages<T> value) updateMassages,
   }) {
     return chatSuccess(this);
   }
@@ -432,6 +454,7 @@ class _$ChatSuccessImpl<T> implements ChatSuccess<T> {
     TResult? Function(ChatLoading<T> value)? chatLoading,
     TResult? Function(ChatSuccess<T> value)? chatSuccess,
     TResult? Function(ChatError<T> value)? chatError,
+    TResult? Function(UpdateMassages<T> value)? updateMassages,
   }) {
     return chatSuccess?.call(this);
   }
@@ -443,6 +466,7 @@ class _$ChatSuccessImpl<T> implements ChatSuccess<T> {
     TResult Function(ChatLoading<T> value)? chatLoading,
     TResult Function(ChatSuccess<T> value)? chatSuccess,
     TResult Function(ChatError<T> value)? chatError,
+    TResult Function(UpdateMassages<T> value)? updateMassages,
     required TResult orElse(),
   }) {
     if (chatSuccess != null) {
@@ -530,6 +554,7 @@ class _$ChatErrorImpl<T> implements ChatError<T> {
     required TResult Function() chatLoading,
     required TResult Function(T data) chatSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) chatError,
+    required TResult Function() updateMassages,
   }) {
     return chatError(apiErrorModel);
   }
@@ -541,6 +566,7 @@ class _$ChatErrorImpl<T> implements ChatError<T> {
     TResult? Function()? chatLoading,
     TResult? Function(T data)? chatSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? chatError,
+    TResult? Function()? updateMassages,
   }) {
     return chatError?.call(apiErrorModel);
   }
@@ -552,6 +578,7 @@ class _$ChatErrorImpl<T> implements ChatError<T> {
     TResult Function()? chatLoading,
     TResult Function(T data)? chatSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? chatError,
+    TResult Function()? updateMassages,
     required TResult orElse(),
   }) {
     if (chatError != null) {
@@ -567,6 +594,7 @@ class _$ChatErrorImpl<T> implements ChatError<T> {
     required TResult Function(ChatLoading<T> value) chatLoading,
     required TResult Function(ChatSuccess<T> value) chatSuccess,
     required TResult Function(ChatError<T> value) chatError,
+    required TResult Function(UpdateMassages<T> value) updateMassages,
   }) {
     return chatError(this);
   }
@@ -578,6 +606,7 @@ class _$ChatErrorImpl<T> implements ChatError<T> {
     TResult? Function(ChatLoading<T> value)? chatLoading,
     TResult? Function(ChatSuccess<T> value)? chatSuccess,
     TResult? Function(ChatError<T> value)? chatError,
+    TResult? Function(UpdateMassages<T> value)? updateMassages,
   }) {
     return chatError?.call(this);
   }
@@ -589,6 +618,7 @@ class _$ChatErrorImpl<T> implements ChatError<T> {
     TResult Function(ChatLoading<T> value)? chatLoading,
     TResult Function(ChatSuccess<T> value)? chatSuccess,
     TResult Function(ChatError<T> value)? chatError,
+    TResult Function(UpdateMassages<T> value)? updateMassages,
     required TResult orElse(),
   }) {
     if (chatError != null) {
@@ -606,4 +636,124 @@ abstract class ChatError<T> implements ChatState<T> {
   @JsonKey(ignore: true)
   _$$ChatErrorImplCopyWith<T, _$ChatErrorImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UpdateMassagesImplCopyWith<T, $Res> {
+  factory _$$UpdateMassagesImplCopyWith(_$UpdateMassagesImpl<T> value,
+          $Res Function(_$UpdateMassagesImpl<T>) then) =
+      __$$UpdateMassagesImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$UpdateMassagesImplCopyWithImpl<T, $Res>
+    extends _$ChatStateCopyWithImpl<T, $Res, _$UpdateMassagesImpl<T>>
+    implements _$$UpdateMassagesImplCopyWith<T, $Res> {
+  __$$UpdateMassagesImplCopyWithImpl(_$UpdateMassagesImpl<T> _value,
+      $Res Function(_$UpdateMassagesImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UpdateMassagesImpl<T> implements UpdateMassages<T> {
+  const _$UpdateMassagesImpl();
+
+  @override
+  String toString() {
+    return 'ChatState<$T>.updateMassages()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UpdateMassagesImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() chatLoading,
+    required TResult Function(T data) chatSuccess,
+    required TResult Function(ApiErrorModel apiErrorModel) chatError,
+    required TResult Function() updateMassages,
+  }) {
+    return updateMassages();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? chatLoading,
+    TResult? Function(T data)? chatSuccess,
+    TResult? Function(ApiErrorModel apiErrorModel)? chatError,
+    TResult? Function()? updateMassages,
+  }) {
+    return updateMassages?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? chatLoading,
+    TResult Function(T data)? chatSuccess,
+    TResult Function(ApiErrorModel apiErrorModel)? chatError,
+    TResult Function()? updateMassages,
+    required TResult orElse(),
+  }) {
+    if (updateMassages != null) {
+      return updateMassages();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(ChatLoading<T> value) chatLoading,
+    required TResult Function(ChatSuccess<T> value) chatSuccess,
+    required TResult Function(ChatError<T> value) chatError,
+    required TResult Function(UpdateMassages<T> value) updateMassages,
+  }) {
+    return updateMassages(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(ChatLoading<T> value)? chatLoading,
+    TResult? Function(ChatSuccess<T> value)? chatSuccess,
+    TResult? Function(ChatError<T> value)? chatError,
+    TResult? Function(UpdateMassages<T> value)? updateMassages,
+  }) {
+    return updateMassages?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(ChatLoading<T> value)? chatLoading,
+    TResult Function(ChatSuccess<T> value)? chatSuccess,
+    TResult Function(ChatError<T> value)? chatError,
+    TResult Function(UpdateMassages<T> value)? updateMassages,
+    required TResult orElse(),
+  }) {
+    if (updateMassages != null) {
+      return updateMassages(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateMassages<T> implements ChatState<T> {
+  const factory UpdateMassages() = _$UpdateMassagesImpl<T>;
 }

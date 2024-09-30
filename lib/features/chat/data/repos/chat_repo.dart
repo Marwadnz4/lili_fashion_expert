@@ -1,20 +1,30 @@
+import 'package:google_generative_ai/google_generative_ai.dart';
 import 'package:lili_fashion_expert/core/networking/api_error_handler.dart';
 import 'package:lili_fashion_expert/core/networking/api_result.dart';
-import 'package:lili_fashion_expert/core/networking/api_service.dart';
-import 'package:lili_fashion_expert/features/chat/data/models/chat_request_body.dart';
-import 'package:lili_fashion_expert/features/chat/data/models/chat_response.dart';
+import 'package:lili_fashion_expert/core/networking/gemini_service.dart';
 
 class ChatRepo {
-  final ApiService _apiService;
+  final GeminiService _geminiService;
 
-  ChatRepo(this._apiService);
+  ChatRepo(this._geminiService);
 
-  Future<ApiResult<ChatResponse>> chat(
-      ChatRequestBody chatRequestBody) async {
+  Future<ApiResult<GenerateContentResponse>> setupRole(String message) async {
     try {
-      final response = await _apiService.chat(chatRequestBody);
-      return ApiResult.success(response);
+      final content = await _geminiService.setupRole(message);
+      return ApiResult.success(content);
     } catch (error) {
+      print(error);
+      return ApiResult.failure(ApiErrorHandler.handle(error));
+    }
+  }
+
+  Future<ApiResult<GenerateContentResponse>> generateContent(
+      String message) async {
+    try {
+      final content = await _geminiService.generateContent(message);
+      return ApiResult.success(content);
+    } catch (error) {
+      print(error);
       return ApiResult.failure(ApiErrorHandler.handle(error));
     }
   }
