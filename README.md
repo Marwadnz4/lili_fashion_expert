@@ -8,7 +8,7 @@
 ├── lib                                         
     ├── core
     │   ├──  DI (get_it)   
-    │   ├── networking (Dio + Retrofit)
+    │   ├── networking (google_generative_ai)
     │   ├── routing
     │   ├── helpers
     │   ├── theming            
