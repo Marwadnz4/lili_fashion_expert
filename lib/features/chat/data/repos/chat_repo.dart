@@ -8,9 +8,9 @@ class ChatRepo {
 
   ChatRepo(this._geminiService);
 
-  Future<ApiResult<GenerateContentResponse>> setupRole(String message) async {
+  Future<ApiResult<GenerateContentResponse>> setupRole() async {
     try {
-      final content = await _geminiService.setupRole(message);
+      final content = await _geminiService.setupRole();
       return ApiResult.success(content);
     } catch (error) {
       print(error);

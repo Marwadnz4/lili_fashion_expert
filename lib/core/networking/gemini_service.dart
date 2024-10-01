@@ -6,7 +6,7 @@ class GeminiService {
     model: 'gemini-pro',
     apiKey: GeminiConstants.geminiApiKey,
     generationConfig: GenerationConfig(
-      temperature: 0.9,
+      temperature: 0.6,
       topK: 3,
       maxOutputTokens: 2048,
     ),
@@ -18,12 +18,12 @@ class GeminiService {
 
   ChatSession? chatSession;
 
-  Future<GenerateContentResponse> setupRole(String message) async {
+  Future<GenerateContentResponse> setupRole() async {
     chatSession = geminiProModel.startChat();
     GenerateContentResponse generateContentResponse =
         await chatSession!.sendMessage(
       Content.text(
-        message,
+        GeminiConstants.prompt,
       ),
     );
     print('++++++++++++++++++$generateContentResponse');
@@ -34,7 +34,7 @@ class GeminiService {
     GenerateContentResponse generateContentResponse =
         await chatSession!.sendMessage(
       Content.text(
-        message,
+        GeminiConstants.prompt + message,
       ),
     );
     print('++++++++++++++++++$generateContentResponse');

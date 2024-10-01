@@ -30,16 +30,15 @@ class ChatCubit extends Cubit<ChatState> {
   // }
 
   void setupChat() async {
-   
-
     emit(const ChatState.chatLoading());
-    final response = await _chatRepo.setupRole(GeminiConstants.prompt);
+    final response = await _chatRepo.setupRole();
     response.when(success: (chatResponse) async {
       print('+++++++++++++++++++++++++++++${chatResponse.text}');
       messages.add(
         Message(
           isUser: false,
-          message: chatResponse.text ?? 'هيا بنا لنتكلم عن الموضة و تنسيقات الملابس',
+          message:
+              chatResponse.text ?? 'هيا بنا لنتكلم عن الموضة و تنسيقات الملابس',
           date: DateTime.now(),
         ),
       );

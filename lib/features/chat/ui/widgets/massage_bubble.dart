@@ -29,7 +29,7 @@ class MassageBubble extends StatelessWidget {
                 )
               : BorderRadius.only(
                   topRight: Radius.circular(20.r),
-                  bottomLeft: Radius.circular(20.r),
+                  topLeft: Radius.circular(20.r),
                   bottomRight: Radius.circular(20.r),
                 ),
         ),
